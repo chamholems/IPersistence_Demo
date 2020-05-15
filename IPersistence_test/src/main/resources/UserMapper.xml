@@ -1,11 +1,11 @@
-<mapper namespace="user">
+<mapper namespace="dao.IUserDao">
 
     <!-- sql的唯一标识： namespace.id来组成 statementID -->
-    <select id="selectList" resultType="pojo.User">
+    <select id="findAll" resultType="pojo.User">
         select * from user
     </select>
 
-    <select id="selectOne" resultType="pojo.User" paramType="pojo.User">
+    <select id="findByCondition" resultType="pojo.User" paramType="pojo.User">
         select * from user where id = #{id}
     </select>
 
